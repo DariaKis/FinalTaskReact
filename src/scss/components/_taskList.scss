@@ -1,0 +1,229 @@
+@import '../mixin/mixinAll';
+
+
+.container {
+  .board {
+    &__header {
+      width: 1280px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .nameOfTask {
+        width: auto;
+        margin-bottom: 0;
+        margin-right: 10px;
+      }
+
+      .addTask {
+        text-decoration: none;
+        padding: 0 20px;
+        width: 169px;
+        height: 24px;
+        color: #FFFFFF;
+        background: #7B61FF;
+        border: 1px solid #7B61FF;
+        box-sizing: border-box;
+        border-radius: 5px;
+        @include _fontParams;
+        font-weight: 300;
+      }
+    }
+
+    .card__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+      width: 1280px;
+      background: #FFFFFF;
+      box-shadow: 0px 0px 5px 3px #B5B5B5;
+      border-radius: 5px;
+
+      .filter {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        .type {
+          width: 98px;
+        }
+
+        .name {
+          width: 527px;
+        }
+
+        .status {
+          width: 120px;
+        }
+
+        .user {
+          width: 180px;
+        }
+
+        .priority {
+          width: 120px;
+        }
+
+        button {
+          color: #FFFFFF;
+          padding: 0px 20px;
+          width: 125px;
+          height: 24px;
+          background: #7B61FF;
+          border: 1px solid #7B61FF;
+          box-sizing: border-box;
+          border-radius: 5px;
+          @include _fontParams;
+        }
+      }
+
+      .card__task {
+        width: 100%;
+        background: #FFFFFF;
+        box-shadow: 0 0 2px 1px #B5B5B5;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        justify-content: space-between;
+
+        .task {
+          text-decoration: none;
+          display: flex;
+          justify-content: space-between;
+          height: 68px;
+          align-items: center;
+          padding-left: 30px;
+          @include _fontParams;
+
+          &:nth-child(even) {
+            background-color: #F2F2F2;
+          }
+
+          &:hover {
+            border: 2px solid #4BD379;
+          }
+        .typeImg{
+          padding-right: 30px;
+        }
+
+          &__title{
+            text-decoration: none;
+            width: 527px;
+            margin-right: 14px;
+            padding-left: 20px;
+          }
+
+          &__user {
+            width: 180px;
+            margin-right: 14px;
+            padding-left: 20px;
+          }
+
+          &__status {
+            width: 120px;
+            margin-right: 14px;
+            padding-left: 15px;
+
+            .testingOrInProgressBtn {
+             @include _yellowStatusBtn
+            }
+            .openedBtn {
+              @include _greenStatusBtn
+            }
+            .completeBtn{
+              @include _greyStatusBtn
+            }
+          }
+
+          .wrapper {
+            display: flex;
+            align-items: center;
+            .userIcon{
+              width: 16px;
+              height: 7px;
+              align-items: center;
+              margin-right: 5px;
+              margin-top: 4px;
+            }
+          }
+            &__highRank {
+              @include _highPriority
+            }
+
+            &__mediumRank {
+              @include _middlePriority
+            }
+
+            &__lowRank {
+              //width: 80px;
+              align-items: center;
+              @include _lowPriority
+            }
+
+          &__edit {
+            width: 20px;
+            height: 20px;;
+            margin-right: 35px;
+            margin-left: 120px;
+            align-items: center;
+            position: relative;
+
+            &:hover .bar {
+              background-color: white;
+            }
+            &:hover .task__tools{
+              display: block;
+            }
+
+            &:hover {
+              background: #7B61FF;
+              mix-blend-mode: normal;
+              border-radius: 5px;
+            }
+
+            .bar {
+              width: 10px;
+              height: 2px;
+              background-color: #7B61FF;
+              margin: 3px 0 2px 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.task__tools{
+  padding: 2px 0px;
+  display: none;
+  position: absolute;
+  width: 105px;
+  right: 0px;
+  top: 20px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 2px 2px rgba(123, 97, 255, 0.5);
+  border-radius: 5px;
+  z-index: 1;
+
+  .tools__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    .tools {
+      font-family: 'Inter', inherit;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 14px;
+      padding: 0 5px;
+      margin-bottom: 5px;
+      text-decoration: none;
+      cursor: pointer;
+
+      &:hover {
+        color: #FF6161;
+      }
+    }
+  }
+}

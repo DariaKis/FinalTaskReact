@@ -1,0 +1,100 @@
+@import '../colors';
+
+
+
+@mixin _fontParams{
+  font-family: 'Roboto', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+@mixin _ownPosition{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin  _greyStatusBtn{
+  padding: 2px 10px;
+  //width: 78px;
+  height: 20px;
+  background: #CCCCCC;
+  border: 1px solid #333333;
+  border-radius: 5px;
+  color: #333333;
+
+}
+
+@mixin  _yellowStatusBtn{
+  padding: 2px 10px;
+  height: 20px;
+  background: #FFC700;
+  border: 1px solid #846F00;
+  border-radius: 5px;
+  color: #846F00;
+
+}
+
+@mixin _greenStatusBtn{
+  padding: 2px 10px;
+  //width: 77px;
+  height: 20px;
+  background: #4BD379;
+  border: 1px solid #157536;
+  border-radius: 5px;
+  color: #157536;
+
+}
+
+@mixin _lowPriority{
+  width:80px;
+  display: flex;
+  height: 16px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #3CA961;
+  margin-left: 10px;
+}
+
+@mixin _middlePriority{
+  display: flex;
+  height: 16px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #E9B500;
+  margin-left: 10px;
+
+}
+
+@mixin _highPriority{
+  display: flex;
+  height: 16px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #D14343;
+  margin-left: 10px;
+}
+
+@mixin _styleForTools{
+  width: 24px;
+  height: 24px;
+  background-color: #7B61FF;
+  color: #F4F4F4;
+  border: 1px solid #7B61FF;
+  box-sizing: border-box;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0 5px;
+  align-items: center;
+}

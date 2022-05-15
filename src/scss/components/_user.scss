@@ -1,0 +1,161 @@
+@import '../mixin/mixinAll';
+
+.task__wrapper {
+  display: flex;
+  position: relative;
+
+  .user {
+    height: 602px;
+    width: 340px;
+    padding: 0 20px;
+    border-right:  1px solid #B5B5B5;
+
+      &Icon{
+        width: 186px;
+        height:186px;
+        margin-bottom: 20px;
+        border-radius: 50%
+      }
+    .aboutTitle{
+      @include _fontParams;
+      align-items: center;
+      color: #CCCCCC;
+      margin-bottom: 5px;
+    }
+    .aboutSubtitle{
+      @include _fontParams;
+      display: flex;
+      align-items: center;
+      color: #333333
+    }
+  }
+  .about__tasks{
+    width: 939px;
+    padding: 0 20px;
+
+    .taskTitle{
+      @include _fontParams;
+      align-items: center;
+      color: #CCCCCC;
+      margin-bottom: 5px;
+    }
+    .about__board{
+      height: 534px;
+      background: #FFFFFF;
+      box-shadow: 0px 0px 2px 1px #B5B5B5;
+      border-radius: 5px;
+      margin-bottom: 20px;
+        .about__wrapper{
+          height: 64px;
+          text-decoration: none;
+          &:hover {
+            border: 2px solid #4BD379;
+          }
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          &:nth-child(even) {
+            background-color:#F2F2F2;
+          }
+        }
+    }
+
+    .task__check{
+      margin-left: 30px;
+        width: 24px;
+        height: 24px;
+        background: #00D1FF;
+        border-radius: 5px;
+        margin-right: 58px;
+        position: relative;
+
+        .circle{
+          position: absolute;
+          width: 12px;
+          height: 12px;
+          left: 6px;
+          top: 6px;
+          background: #FFFFFF;
+          border-radius: 50px;
+        }
+      }
+    .bodyTask{
+      width: 527px;
+    }
+    .statusTask{
+      width: 113px;
+      margin-right: 21px;
+      .testingOrInProgressBtn {
+        @include _yellowStatusBtn
+      }
+      .openedBtn {
+        @include _greenStatusBtn
+      }
+      .completeBtn{
+        @include _greyStatusBtn
+      }
+    }
+    .wrapper {
+      align-items: center;
+      margin-right: 35px;
+      display: flex;
+      width: 95px;
+      .arrowIcon{
+        width: 16px;
+        height: 7px;
+        margin-right: 8px;
+        margin-top: 4px;
+      }
+    }
+    .task__lowRank{
+      @include _lowPriority
+    }
+    .task__mediumRank{
+      @include _middlePriority
+    }
+    .task__highRank{
+      @include _highPriority
+    }
+  }
+}
+.card__footer{
+  width:100%;
+  justify-content: space-between;
+  display: flex;
+  @include _fontParams;
+  .tabs {
+    @include _ownPosition;
+
+    &__btn {
+      width: 67px;
+      height: 24px;
+      background: #B5B5B5;
+      border: 1px solid #B5B5B5;
+      box-sizing: border-box;
+      border-radius: 5px;
+      color: #CCCCCC;
+      &:hover {
+        background: #F4F4F4;
+        color:black;
+        border: 1px solid #333333;
+      }
+    }
+
+    .tab {
+      @include _styleForTools;
+      &.active {
+        background: #F4F4F4;
+        color:black;
+        border: 1px solid #333333;
+      }
+    }
+  }
+  .showing__list{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #B5B5B5;
+  }
+
+}

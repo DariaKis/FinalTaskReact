@@ -1,0 +1,13 @@
+@mixin _selectInput{
+  align-items: center;
+  padding: 5px 10px;
+  &:disabled + label {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+  &:checked + input {
+    background-color: #7B61FF;
+    color: white;
+  }
+
+}

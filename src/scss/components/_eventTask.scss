@@ -1,0 +1,42 @@
+@import '../mixin/mixinAll';
+.user{
+  .itemTitle {
+    color: #CCCCCC;
+    margin-bottom: 5px;
+    @include _fontParams;
+  }
+
+  select{
+    margin-bottom: 20px;
+    width: 300px;
+    height: 24px;
+  }
+}
+
+.about__task__wrapper{
+  padding-left: 20px;
+  input{
+    width: 400px;
+    height: 24px;
+    margin-bottom: 20px;
+    padding: 5px 10px;
+  }
+    textarea{
+      width: 400px;
+      height: 65vh;
+      padding: 5px 10px;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+
+    }
+  .taskTitle{
+    width: 400px;
+    height: 19px;
+    @include _fontParams;
+    color: #CCCCCC;
+    margin-bottom: 5px;
+  }
+}

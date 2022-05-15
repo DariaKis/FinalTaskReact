@@ -1,0 +1,246 @@
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+form{
+  position: relative;
+  &:hover .__select__content{
+    display: flex;
+  }
+  &:hover .arrow{
+    transform: rotate(-135deg);
+  }
+}
+.__select {
+  display: flex;
+  width: 98px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.__select__content {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: auto;
+  background: #FFFFFF;
+  border: 1px solid #7B61FF;
+  box-shadow: 0px 0px 2px 2px rgba(123, 97, 255, 0.5);
+  border-radius: 3px;
+  padding-top: 36px;
+  top: -5px;
+  left: -4px;
+}
+.__select__wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid rgba(199, 204, 209, 0.3764705882);
+  &:first-child{
+    border-top: none;
+  }
+  &:hover{
+    background: #E6E1FF;
+  }
+  &-active .type__select__input{
+    background-color: #7B61FF;
+    color: white;
+  }
+
+
+}
+.__select__item{
+  border-top: 1px solid #C7CCD160;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+}
+.resetType {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  margin: 0px 10px 0 0;
+  width: 98px;
+  height: 24px;
+  box-shadow: inset 0px 0px 2px 1px #B5B5B5;
+  border-radius: 3px;
+  &:hover {
+    background: #E6E1FF;
+  }
+
+  .input__title{
+    width: 527px;
+    height: 14px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 14px;
+    color: #CCCCCC;
+    margin: 0px 5px 0px 5px;
+  }
+
+  .arrow{
+    border: solid #CCCCCC;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    margin-right: 8px;
+    position: absolute;
+    left:83px;
+  }
+}
+
+.resetName {
+  margin-left: 10px;
+  position: relative;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  width: 180px;
+  height: 24px;
+  box-shadow: inset 0px 0px 2px 1px #B5B5B5;
+  justify-content: space-between;
+
+  border-radius: 3px;
+
+  &:hover {
+    background: #E6E1FF;
+  }
+  .input__title{
+    width: 100%;
+    height: 14px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    color: #CCCCCC;
+    margin: 0px 10px;
+  }
+  .arrow{
+    border: solid #CCCCCC;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    margin-right: 8px;
+
+  }
+}
+
+  .input__title__text{
+    width: 527px;
+    height: 14px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    color: #CCCCCC;
+    margin: 0px 10px;
+
+  }
+
+
+.reset{
+  position: relative;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  width: 120px;
+  height: 24px;
+  box-shadow: inset 0px 0px 2px 1px #B5B5B5;
+  justify-content: space-between;
+  border-radius: 3px;
+
+  &:hover {
+    background: #E6E1FF;
+  }
+  .input__title{
+    width: 100%;
+    height: 14px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    color: #CCCCCC;
+    margin: 0px 10px;
+  }
+  .arrow{
+    position: absolute;
+    left: 103px;
+    border: solid #CCCCCC;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    margin-right: 8px;
+  }
+}
+.type__select__input {
+  margin-right: 10px;
+  margin-left: 7px;
+
+  @include _selectInput
+}
+#task input {
+  color:yellow;
+}
+.user__select__input {
+  margin-right: 10px;
+  margin-left: 7px;
+  @include _selectInput
+}
+.rank__select__input {
+  margin-right: 10px;
+  margin-left: 7px;
+  @include _selectInput
+}
+.status__select__input {
+  margin-right: 10px;
+  margin-left: 7px;
+  @include _selectInput
+}
+
+.text__select__input{
+  width: 527px;
+  padding: 5px 10px;
+  height: 24px;
+  background: #FFFFFF;
+  box-shadow: inset 0px 0px 2px 1px #B5B5B5;
+  border-radius: 3px;
+  border:none;
+  &::placeholder{
+    color: #CCCCCC;
+  }
+}
+.__select__label {
+  font-family: 'Inter', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  transition: all 0.2s ease-out;
+  padding: 5px 0;
+  cursor: pointer;
+
+
+  & + input + & {
+    border-top: 1px solid #C7CCD160;
+  }
+
+}
